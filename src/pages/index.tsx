@@ -13,7 +13,7 @@ export default function Home() {
           <div className='flex flex-col-reverse sm:flex-row items-start'>
             <div className='flex flex-col pr-8'>
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-                Brayan Mejia Cuenca
+                Brayan Mejia Cuenca 👋
               </h1>
               <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
                 Full-Stack Software Engineer
@@ -24,13 +24,13 @@ export default function Home() {
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
               <Image
+                className="rounded-full filter grayscale"
                 alt="Brayan Mejia Cuenca"
-                height={176}
-                width={176}
+                height={150}
+                width={150}
                 src="/avatar.jpg"
                 sizes="30vw"
                 priority
-                className="rounded-full filter grayscale"
               />
             </div>
           </div>
@@ -40,29 +40,31 @@ export default function Home() {
           </h3>
           <div className='flex gap-6 flex-col md:flex-row'>
             <ProjectCard
-              title="MeetUp"
+              title="MeetUp App 📍"
               description="A social media platform for musicians to connect with each other and share their content."
-              href="https://meetup-music.vercel.app/"
+              href="https://github.com/Mejiabrayan/MeetUp-App"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <ProjectCard
-              title="MeetUp"
-              description="A social media platform for musicians to connect with each other and share their content."
-              href="https://meetup-music.vercel.app/"
+              title="MyMovies API 🎬"
+              description="This is a client-side of a movie database App called myMovies which fetches data from its server-side (MyMovies-API)."
+              href="https://github.com/Mejiabrayan/myMovies"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
             <ProjectCard
-              title="MeetUp"
-              description="A social media platform for musicians to connect with each other and share their content."
-              href="https://meetup-music.vercel.app/"
+              title="Chatty App 📱"
+              description="This is a chat app for mobile devices built with React-Native."
+              href="https://github.com/Mejiabrayan/Chatty-app"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
-             <Link
+
+          </div>
+          <Link
             href="/project"
             className="flex items-center mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6"
           >
             <>
-              {'Read all posts'}
+              {'See all projects'}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -79,11 +81,11 @@ export default function Home() {
               </svg>
             </>
           </Link>
-
-
-          </div>
         </div>
+
       </Container>
+
     </Suspense>
-  )
+
+  );
 }

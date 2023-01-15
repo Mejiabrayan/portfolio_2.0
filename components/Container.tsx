@@ -3,8 +3,8 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
-import cn from 'classnames'
-import Footer from './footer';
+import cn from 'classnames';
+import Footer from './Footer';
 
 function NavItem({ href, text }) {
     const router = useRouter();
