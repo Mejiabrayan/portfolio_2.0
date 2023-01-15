@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import cn from 'classnames'
+import Footer from './footer';
 
 function NavItem({ href, text }) {
     const router = useRouter();
@@ -24,7 +25,7 @@ function NavItem({ href, text }) {
     );
 }
 
-export default function Container(props: any) {
+export default function Container(props) {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
 
@@ -42,7 +43,7 @@ export default function Container(props: any) {
     };
 
     return (
-        <div className="bg-grey-50 dark:bg-grey-900">
+        <div className="bg-gray-50 dark:bg-gray-900">
             <Head>
                 <title>{meta.title}</title>
                 <meta name="robots" content="follow, index" />
@@ -112,6 +113,7 @@ export default function Container(props: any) {
             >
                 {children}
                 {/* Add Footer Here Soon */}
+                <Footer />
             </main>
         </div>
     );
