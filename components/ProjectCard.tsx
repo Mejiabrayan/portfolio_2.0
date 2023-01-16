@@ -1,14 +1,20 @@
 import Link from 'next/link'
 import cn from 'classnames'
 
-
-export default function ProjectCard({
-    title,
-    description,
-    href,
-    gradient,
-    ...props
-}) {
+type Props = {
+    title: string,
+    description: string,
+    href: string | URL,
+    gradient: string | { [key:string]: string },
+    [key:string]: any
+  };
+  
+  export default function ProjectCard({
+      title,
+      description,
+      href,
+      gradient,
+  }: Props)  {
     return (
         <Link
             href={href}

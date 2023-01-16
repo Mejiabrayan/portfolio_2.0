@@ -46,7 +46,7 @@ export default function Contact() {
                                     className="border border-gray-400 p-2 rounded-lg w-full"
                                     id="message"
                                     name="message"
-                                    rows="4"
+                                    rows={4}
                                     placeholder="Your message"
                                     required
                                 ></textarea>

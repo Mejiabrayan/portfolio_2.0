@@ -4,9 +4,12 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 import cn from 'classnames';
-import Footer from './Footer';
 
-function NavItem({ href, text }) {
+import Footer from 'components/Footer';
+import MobileMenu from 'components/MobileMenu';
+
+
+function NavItem({ href, text }: { href: string; text: string; }) {
     const router = useRouter();
     const isActive = router.asPath === href;
 
@@ -25,7 +28,7 @@ function NavItem({ href, text }) {
     );
 }
 
-export default function Container(props) {
+export default function Container(props: { [x: string]: any; children: any; }) {
     const [mounted, setMounted] = useState(false);
     const { resolvedTheme, setTheme } = useTheme();
 
@@ -67,7 +70,7 @@ export default function Container(props) {
                         Skip to content
                     </a>
                     <div className="ml-[-0.60rem]">
-                        {/* Add Mobile View here later */}
+                        <MobileMenu />
                         <NavItem href="/" text="Home" />
                         <NavItem href="/contact" text="Contact" />
                         <NavItem href="/project" text="Project" />
@@ -118,3 +121,4 @@ export default function Container(props) {
         </div>
     );
 }
+
