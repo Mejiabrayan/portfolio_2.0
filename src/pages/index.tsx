@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
+import TechStack from 'components/TechStack';
 
 export default function Home() {
   return (
@@ -19,8 +20,10 @@ export default function Home() {
                 Full-Stack Software Engineer
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Based in the Bay Area, California. Currently building a project that helps musicians take their content creations to the new heights.
+                Based in the Bay Area, California. Currently focused on starting a project that helps musicians take their content creations to the new heights.
               </p>
+
+
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
               <Image
@@ -41,7 +44,7 @@ export default function Home() {
           <div className='flex gap-6 flex-col md:flex-row'>
             <ProjectCard
               title="MeetUp App 📍"
-              description="A social media platform for musicians to connect with each other and share their content."
+              description="Find Events Near You & Connect With Like-Minded Developers With MeetUp App."
               href="https://github.com/Mejiabrayan/MeetUp-App"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
@@ -82,6 +85,11 @@ export default function Home() {
             </>
           </Link>
         </div>
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
+           
+          <TechStack />
+        </div>
+
 
       </Container>
 

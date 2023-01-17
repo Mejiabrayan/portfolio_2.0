@@ -1,0 +1,10 @@
+li {
+    display: inline;
+    padding: 0 0.5em;
+
+}
+
+li:first-child {
+    padding-left: 0;
+}
+    
