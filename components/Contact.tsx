@@ -50,9 +50,14 @@ export default function ContactForm() {
                     </div>
                 </div>
                 <div className='flex justify-center items-center mx-auto p-6'>
-                    <button className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600" >
+                    {/* create gradient button using tailwind */}
+
+                    <button className="bg-gradient-to-r from-blue-400 to-blue-500 text-white p-2 rounded-lg hover:from-blue-500 hover:to-blue-600" >
                         Send
                     </button>
+                    {/* <button className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600" >
+                        Send
+                    </button> */}
                 </div>
             </form>
         </div>

@@ -1,25 +1,42 @@
-import React from 'react';
+
+import type { GetStaticProps } from 'next';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
 import TechStack from 'components/TechStack';
+import styles from '../styles/emoji.module.css'
+import { Experience, Projects, Skill, Social, PageInfo } from 'typings';
+import { fetchPageInfo } from 'utils/pageInfo';
+import { fetchExperiences } from 'utils/fetchExperiences';
+import { fetchSkills } from 'utils/fetchSkills';
+import { fetchProjects } from 'utils/fetchProjects';
+import { fetchSocials } from 'utils/fetchSocials';
 
-export default function Home() {
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Projects[];
+  socials: Social[];
+}
+
+export default function Home({ experiences, skills, socials, pageInfo }: Props) {
   return (
     <Suspense fallback={null}>
       <Container>
-        <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16 ">
           <div className='flex flex-col-reverse sm:flex-row items-start'>
             <div className='flex flex-col pr-8'>
               <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-                Brayan Mejia Cuenca 👋
+                Brayan Mejia Cuenca <div className={`${styles.wave} animate-motion inline-block`}>👋</div>
               </h1>
               <h2 className='text-gray-700 dark:text-gray-200 mb-4'>
                 Full-Stack Software Engineer
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
+
                 Based in the Bay Area, California. Currently focused on starting a project that helps musicians take their content creations to the new heights.
               </p>
 
@@ -85,8 +102,8 @@ export default function Home() {
             </>
           </Link>
         </div>
-        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-           
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 ">
+
           <TechStack />
         </div>
 
@@ -96,4 +113,23 @@ export default function Home() {
     </Suspense>
 
   );
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experiences: Experience[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Projects[] = await fetchProjects();
+  const socials: Social[] = await fetchSocials();
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      skills,
+      projects,
+      socials,
+    },
+
+    revalidate: 10,
+  }
 }

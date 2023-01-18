@@ -97,8 +97,6 @@ export default function MobileMenu() {
 
 
 
-
-
 function MenuIcon(props: JSX.IntrinsicElements['svg']) {
     return (
         <svg
