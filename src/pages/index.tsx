@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
 import TechStack from 'components/TechStack';
+import Experience from 'components/Experience';
 
 export default function Home() {
   return (
@@ -85,9 +86,12 @@ export default function Home() {
             </>
           </Link>
         </div>
-        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16">
-           
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-5">
+
           <TechStack />
+        </div>
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-0">
+          <Experience />
         </div>
 
 
