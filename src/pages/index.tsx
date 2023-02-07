@@ -1,32 +1,13 @@
-
-import type { GetStaticProps } from 'next';
 import { Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
 import TechStack from 'components/TechStack';
-<<<<<<< HEAD
-import styles from '../styles/emoji.module.css'
-import { Experience, Projects, Skill, Social, PageInfo } from 'typings';
-import { fetchPageInfo } from 'utils/pageInfo';
-import { fetchExperiences } from 'utils/fetchExperiences';
-import { fetchSkills } from 'utils/fetchSkills';
-import { fetchProjects } from 'utils/fetchProjects';
-import { fetchSocials } from 'utils/fetchSocials';
-=======
 import Experience from 'components/Experience';
->>>>>>> 6b27875
+import styles from '../styles/emoji.module.css'
 
-type Props = {
-  pageInfo: PageInfo;
-  experiences: Experience[];
-  skills: Skill[];
-  projects: Projects[];
-  socials: Social[];
-}
-
-export default function Home({ experiences, skills, socials, pageInfo }: Props) {
+export default function Home(): JSX.Element {
   return (
     <Suspense fallback={null}>
       <Container>
@@ -106,15 +87,11 @@ export default function Home({ experiences, skills, socials, pageInfo }: Props) 
             </>
           </Link>
         </div>
-<<<<<<< HEAD
-        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 ">
-=======
-        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-5">
->>>>>>> 6b27875
+        <div className="flex flex-col justify-center items-center max-w-2xl mx-auto mb-5">
 
           <TechStack />
         </div>
-        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-0">
+        <div className="flex flex-col justify-center items-center max-w-2xl mx-auto mb-16 mt-0">
           <Experience />
         </div>
 
@@ -124,23 +101,4 @@ export default function Home({ experiences, skills, socials, pageInfo }: Props) 
     </Suspense>
 
   );
-}
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Projects[] = await fetchProjects();
-  const socials: Social[] = await fetchSocials();
-  return {
-    props: {
-      pageInfo,
-      experiences,
-      skills,
-      projects,
-      socials,
-    },
-
-    revalidate: 10,
-  }
 }

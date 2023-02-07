@@ -9,9 +9,6 @@ module.exports = {
     './layouts/**/*.tsx'
   ],
   darkMode: 'class',
-  modules: {
-    animations: true,
-  },
   theme: {
     extend: {
       colors: {
@@ -24,7 +21,7 @@ module.exports = {
           400: '#888888',
           500: '#666666',
           600: '#444444',
-          700: '#333333',
+          700: '#111010',
           800: '#222222',
           900: '#111111'
         }
@@ -103,8 +100,5 @@ module.exports = {
   variants: {
     typography: ['dark']
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('tailwind-scrollbar')
-  ]
+  plugins: [require('@tailwindcss/typography')]
 };
