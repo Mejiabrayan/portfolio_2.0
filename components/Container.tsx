@@ -38,9 +38,9 @@ export default function Container(props: { [x: string]: any; children: any; }) {
     const { children, ...customMeta } = props;
     const router = useRouter();
     const meta = {
-        title: 'Brayan Mejia Cuenca – Software Engineer, Web Developer, and Blogger.',
+        title: 'Brayan Mejia Cuenca – Software Engineer, content-creator & classical guitarist.',
         description: `I'm Brayan Mejia Cuenca, a software engineer and web developer from the Bay Area, California. I specialize in building (and occasionally designing) exceptional websites, applications, and everything in between.`,
-        image: 'https://placeholder.com/1200x630',
+        image: '/avatar.jpg',
         type: 'website',
         ...customMeta,
     };
