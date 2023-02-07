@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
 import TechStack from 'components/TechStack';
+<<<<<<< HEAD
 import styles from '../styles/emoji.module.css'
 import { Experience, Projects, Skill, Social, PageInfo } from 'typings';
 import { fetchPageInfo } from 'utils/pageInfo';
@@ -13,6 +14,9 @@ import { fetchExperiences } from 'utils/fetchExperiences';
 import { fetchSkills } from 'utils/fetchSkills';
 import { fetchProjects } from 'utils/fetchProjects';
 import { fetchSocials } from 'utils/fetchSocials';
+=======
+import Experience from 'components/Experience';
+>>>>>>> 6b27875
 
 type Props = {
   pageInfo: PageInfo;
@@ -102,9 +106,16 @@ export default function Home({ experiences, skills, socials, pageInfo }: Props) 
             </>
           </Link>
         </div>
+<<<<<<< HEAD
         <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 ">
+=======
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-5">
+>>>>>>> 6b27875
 
           <TechStack />
+        </div>
+        <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-0">
+          <Experience />
         </div>
 
 
