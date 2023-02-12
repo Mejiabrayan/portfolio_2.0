@@ -23,8 +23,6 @@ export default function Home(): JSX.Element {
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Based in the Bay Area, California. Currently focused on starting a project that helps musicians take their content creations to the new heights.
               </p>
-
-
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
               <Image
