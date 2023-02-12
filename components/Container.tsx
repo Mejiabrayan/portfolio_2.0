@@ -68,7 +68,7 @@ export default function Container(props: { [x: string]: any; children: any; }) {
                         <MobileMenu />
                         <NavItem href="/" text="Home" />
                         <NavItem href="/contact" text="Contact" />
-                        <NavItem href="/project" text="Project" />
+                        <NavItem href="/projects" text="Projects" />
                         <NavItem href="/blog" text="Blog" />
                     </div>
                     <button

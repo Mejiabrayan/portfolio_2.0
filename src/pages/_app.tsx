@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class">
-      <main className={interVariable.className}>
+        <main className={interVariable.className}>
         <Component {...pageProps} />
       </main>
     </ThemeProvider>

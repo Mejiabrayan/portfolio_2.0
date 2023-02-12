@@ -40,7 +40,7 @@ export default function Home(): JSX.Element {
           </div>
 
           <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-            Recent Work
+            Recent Work 📝
           </h3>
           <div className='flex gap-6 flex-col md:flex-row'>
             <ProjectCard

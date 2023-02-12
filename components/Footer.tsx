@@ -37,9 +37,9 @@ export default function Footer() {
                     Contact
                 </Link>
 
-                <ExternalLink href="/project">
+                <Link href="/projects">
                     Project
-                </ExternalLink>
+                </Link>
             </div>
             <div className="flex flex-col space-y-4">
                 <ExternalLink href="https://mejiabrayan.github.io">
