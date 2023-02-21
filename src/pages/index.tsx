@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Container from 'components/Container';
 import ProjectCard from 'components/ProjectCard';
 import TechStack from 'components/TechStack';
-import Experience from 'components/Experience';
 import styles from '../styles/emoji.module.css'
 
 export default function Home(): JSX.Element {
@@ -84,15 +83,9 @@ export default function Home(): JSX.Element {
             </>
           </Link>
         </div>
-        <div className="flex flex-col justify-center items-center max-w-2xl mx-auto mb-5">
-
+        <div className="flex flex-col justify-center items-center max-w-2xl mx-auto mb-10">
           <TechStack />
         </div>
-        <div className="flex flex-col justify-center items-center max-w-2xl mx-auto mb-16 mt-0">
-          <Experience />
-        </div>
-
-
       </Container>
 
     </Suspense>

@@ -36,12 +36,12 @@ export default function Footer() {
                 >
                     Contact
                 </Link>
+                <Link href="/projects"
+                    className='text-gray-500 hover:text-gray-600 transition'
 
-                <Link href="/projects">
-                    Project
+                >
+                    Projects
                 </Link>
-            </div>
-            <div className="flex flex-col space-y-4">
                 <ExternalLink href="https://mejiabrayan.github.io">
                     Github
                 </ExternalLink>
