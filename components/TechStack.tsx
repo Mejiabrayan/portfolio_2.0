@@ -14,21 +14,21 @@ const TechStack: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-400 mt-2 mb-8">
                 I have worked with a range of technologies in the web development world. From Back-end to Design.
             </p>
-            <div className="mb-6">
+            <div className="mb-6 flex flex-wrap">
                 <h2 className="text-lg font-medium text-gray-700 dark:text-gray-200 mb-2">
                     Back-end
                 </h2>
-                <div className="flex overflow-x-scroll">
+                <div className="flex">
                     <FaNodeJs size="1.5em" className="mx-4" />
                     <SiMysql size="1.5em" className="mx-4" />
                     <SiMongodb size="1.5em" className="mx-4" />
                 </div>
             </div>
-            <div>
+            <div className="flex flex-wrap">
                 <h2 className="text-lg font-medium text-gray-700 dark:text-gray-200 mb-2">
                     Front-end
                 </h2>
-                <div className="flex overflow-x-scroll">
+                <div className="flex">
                     <FaHtml5 size="1.5em" className="mx-4" />
                     <SiTypescript size="1.5em" className="mx-4" />
                     <FaReact size="1.5em" className="mx-4" />
