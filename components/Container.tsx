@@ -70,6 +70,8 @@ export default function Container(props: { [x: string]: any; children: any; }) {
                         <NavItem href="/contact" text="Contact" />
                         <NavItem href="/projects" text="Projects" />
                         <NavItem href="/blog" text="Blog" />
+                        <NavItem href="/experience" text="Experience" />
+
                     </div>
                     <button
                         aria-label='Toggle Dark Mode'
